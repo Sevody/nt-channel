@@ -1,13 +1,13 @@
 export class CreateUserDto {
-  first_name: string;
+    first_name: string;
 
-  gender: string;
+    last_name: string;
 
-  image_url: string;
+    gender: string;
 
-  last_name: string;
+    avatar: string;
 
-  locale: string;
+    locale: string;
 
-  [platform_id: string]: string;
+    [platform_id: string]: string;
 }
