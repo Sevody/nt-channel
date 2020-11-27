@@ -1,5 +1,5 @@
 import { Injectable, Logger } from '@nestjs/common';
-import { LineContext, getClient, LineBot, Bot, LineConnector } from 'bottender';
+import { LineContext } from 'bottender';
 import { line, platform, router } from 'bottender/router';
 import { DEFAULT_MESSENGER_LOCALE } from 'common/config/constants';
 import { getUserOptions, setAgentProxy } from 'common/utils';
@@ -27,12 +27,6 @@ export class ChatbotService {
     ) {}
 
     private asyncWrap = (fn) => async (context: LineContext) => {
-        setAgentProxy(context, this.configService);
-        // const client = context.client;
-        // client.axios.defaults.proxy = false;
-        // client.axios.defaults.httpsAgent = tunnel.httpsOverHttp({
-        //     proxy: { host: '127.0.0.1', port: '7890' },
-        // });
         const userOptions = getUserOptions(context);
         const user = await this.userService.validateUser(userOptions);
 
@@ -63,6 +57,7 @@ export class ChatbotService {
         context: LineContext,
         message: Message | Message[],
     ) => {
+        setAgentProxy(context.client, this.configService);
         if (typeof message === 'string') {
             await context.sendText(message);
         } else if (isQuickReplyTemplate(message)) {

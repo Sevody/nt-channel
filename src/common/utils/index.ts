@@ -1,4 +1,5 @@
 import { LineContext } from 'bottender';
+import { LineClient } from 'messaging-api-line';
 import tunnel from 'tunnel';
 import { ConfigService } from 'common/config';
 import { UserOptions } from 'modules/user/user.types';
@@ -16,11 +17,10 @@ export const getUserOptions = (context: LineContext): UserOptions => {
 };
 
 export const setAgentProxy = (
-    context: LineContext,
+    client: LineClient,
     config: ConfigService,
 ): void => {
     if (config.get('PROXY_ENABLE') === 'true') {
-        const client = context.client;
         client.axios.defaults.proxy = false;
         client.axios.defaults.httpsAgent = tunnel.httpsOverHttp({
             proxy: {

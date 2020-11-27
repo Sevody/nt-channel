@@ -18,6 +18,7 @@ import { I18N_FALLBACKS } from 'common/config/constants';
 import { RATE_LIMIT_REQUESTS, RATE_LIMIT_TIME } from 'common/config/rate-limit';
 import { isEnv } from 'common/utils';
 import { ChatbotModule } from 'modules/chatbot/chatbot.module';
+import { RSSbotModule } from 'modules/rssbot/rssbot.module';
 import { I18nModule } from 'modules/external/i18n';
 import { WebhooksModule } from 'modules/webhooks/webhooks.module';
 import { AppController } from './app.controller';
@@ -46,11 +47,12 @@ import { SharedModule } from 'modules/shared/shared.module';
         }),
         ChatbotModule,
         WebhooksModule,
+        RSSbotModule,
     ],
     controllers: [AppController],
 })
 @Injectable()
-export class AppModule implements NestModule {
+export class AppModule implements NestModule, OnApplicationShutdown {
     private readonly logger = new Logger(AppModule.name);
     private readonly shutdownListener$: Subject<void> = new Subject();
 

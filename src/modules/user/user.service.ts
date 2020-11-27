@@ -23,6 +23,15 @@ export class UserService {
         return user;
     }
 
+    async getUsers(
+        options: FindConditions<UserOptions>,
+    ): Promise<UserEntity[]> {
+        const users = await this.userRepository.find(options);
+        if (!users) throw new Error('Not any user exist');
+
+        return users;
+    }
+
     async registerUser(
         userDto: CreateUserDto,
         userOptions: FindConditions<UserOptions>,

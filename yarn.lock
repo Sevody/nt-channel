@@ -2182,7 +2182,7 @@ body-parser@1.19.0, body-parser@^1.19.0:
     raw-body "2.4.0"
     type-is "~1.6.17"
 
-bottender@^1.4.10:
+bottender@1.5.0-y.0:
   version "1.5.0-y.0"
   resolved "https://registry.npm.taobao.org/bottender/download/bottender-1.5.0-y.0.tgz#2ea70a57cffbea1273a976fb79664d72911b4580"
   integrity sha1-LqcKV8/76hJzqXb7eWZNcpEbRYA=
@@ -5953,6 +5953,20 @@ messaging-api-common@^1.0.0, messaging-api-common@^1.0.0-beta.16:
 messaging-api-line@^1.0.0-beta.20:
   version "1.0.1"
   resolved "https://npm-private-toolkit.fangdd.net/messaging-api-line/-/messaging-api-line-1.0.1.tgz#94ebd42873b6a97e0ed68e0f49efa0ed7345c3ce"
+  integrity sha1-lOvUKHO2qX4O1o4PSe+g7XNFw84=
+  dependencies:
+    "@types/warning" "^3.0.0"
+    axios "^0.19.2"
+    axios-error "^1.0.0"
+    image-type "^4.1.0"
+    messaging-api-common "^1.0.0"
+    ts-invariant "^0.4.4"
+    type-fest "^0.15.1"
+    warning "^4.0.3"
+
+messaging-api-line@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npm.taobao.org/messaging-api-line/download/messaging-api-line-1.0.1.tgz#94ebd42873b6a97e0ed68e0f49efa0ed7345c3ce"
   integrity sha1-lOvUKHO2qX4O1o4PSe+g7XNFw84=
   dependencies:
     "@types/warning" "^3.0.0"

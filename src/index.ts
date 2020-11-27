@@ -4,11 +4,9 @@ import {
     NestExpressApplication,
 } from '@nestjs/platform-express';
 import bodyParser from 'body-parser';
-import { LineContext, getClient, LineBot, Bot, LineConnector } from 'bottender';
 import express from 'express';
 import { WinstonModule } from 'nest-winston';
 import { format, transports } from 'winston';
-import tunnel from 'tunnel';
 import { AppModule } from 'modules/app/app.module';
 import { ChatbotModule } from 'modules/chatbot/chatbot.module';
 import { ChatbotService } from 'modules/chatbot/services';
