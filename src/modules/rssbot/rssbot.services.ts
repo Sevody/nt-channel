@@ -5,7 +5,14 @@ import { SendRSSMessageDto } from './dto/send-rss-message.dto';
 import { BroadcastRSSMessageDto } from './dto/broadcast-rss-message.dto';
 import { ConfigService } from 'common/config';
 import { setAgentProxy } from 'common/utils';
+import { RabbitmqSubscribe } from 'modules/external/amqp';
 import { LineClient } from 'messaging-api-line';
+import {
+    MQ_EXCHANGE_NAME,
+    MQ_EXCHANGE_TYPE,
+    MQ_QUEUE_LINE,
+    MQ_ROUTINGKEY_LINE,
+} from './rssbot.constants';
 
 @Injectable()
 export class RSSbotService {
@@ -54,5 +61,20 @@ export class RSSbotService {
             this.logger.log(error);
         }
         return true;
+    }
+
+    @RabbitmqSubscribe(
+        {
+            name: MQ_EXCHANGE_NAME,
+            type: MQ_EXCHANGE_TYPE,
+        },
+        MQ_ROUTINGKEY_LINE,
+        MQ_QUEUE_LINE,
+    )
+    async processMqMessage(raw: Array<any>) {
+        const data = Object.values(raw);
+        data.forEach((message) => {
+            this.sendMessage(message);
+        });
     }
 }

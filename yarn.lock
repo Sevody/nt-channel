@@ -369,6 +369,13 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@golevelup/nestjs-discovery@^2.3.1":
+  version "2.3.1"
+  resolved "https://registry.npm.taobao.org/@golevelup/nestjs-discovery/download/@golevelup/nestjs-discovery-2.3.1.tgz#7e6f798888fb4b571ba413d3fc5c2bbc996800c7"
+  integrity sha1-fm95iIj7S1cbpBPT/FwrvJloAMc=
+  dependencies:
+    lodash "^4.17.15"
+
 "@hapi/address@2.x.x":
   version "2.1.4"
   resolved "https://npm-private-toolkit.fangdd.net/@hapi%2faddress/-/address-2.1.4.tgz#5d67ed43f3fd41a69d4b9ff7b56e7c0d1d0a81e5"
@@ -818,6 +825,14 @@
   resolved "https://npm-private-toolkit.fangdd.net/@tokenizer%2ftoken/-/token-0.1.1.tgz#f0d92c12f87079ddfd1b29f614758b9696bc29e3"
   integrity sha1-8NksEvhwed39Gyn2FHWLlpa8KeM=
 
+"@types/amqplib@^0.5.16":
+  version "0.5.16"
+  resolved "https://registry.npm.taobao.org/@types/amqplib/download/@types/amqplib-0.5.16.tgz#8297c53a1aa0455ea2ac51f923613e886a513ef0"
+  integrity sha1-gpfFOhqgRV6irFH5I2E+iGpRPvA=
+  dependencies:
+    "@types/bluebird" "*"
+    "@types/node" "*"
+
 "@types/anymatch@*":
   version "1.3.1"
   resolved "https://npm-private-toolkit.fangdd.net/@types%2fanymatch/-/anymatch-1.3.1.tgz#336badc1beecb9dacc38bea2cf32adf627a8421a"
@@ -860,6 +875,11 @@
   integrity sha1-255COJMetp74qrCtZSPU1MqjnQM=
   dependencies:
     "@babel/types" "^7.3.0"
+
+"@types/bluebird@*":
+  version "3.5.33"
+  resolved "https://registry.npm.taobao.org/@types/bluebird/download/@types/bluebird-3.5.33.tgz#d79c020f283bd50bd76101d7d300313c107325fc"
+  integrity sha1-15wCDyg71QvXYQHX0wAxPBBzJfw=
 
 "@types/body-parser@*", "@types/body-parser@^1.19.0":
   version "1.19.0"
@@ -1549,6 +1569,25 @@ ajv@6.12.6, ajv@^6.10.0, ajv@^6.10.2, ajv@^6.12.2, ajv@^6.12.3, ajv@^6.12.4, ajv
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
+amqp-connection-manager@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.npm.taobao.org/amqp-connection-manager/download/amqp-connection-manager-3.2.1.tgz#ac33ddb3effb577f2f8e45f6714be5dbdd5b2b1d"
+  integrity sha1-rDPds+/7V38vjkX2cUvl291bKx0=
+  dependencies:
+    promise-breaker "^5.0.0"
+
+amqplib@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.npm.taobao.org/amqplib/download/amqplib-0.6.0.tgz?cache=0&sync_timestamp=1594799245636&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Famqplib%2Fdownload%2Famqplib-0.6.0.tgz#87857c7c95d56d22438ced4cf1f7e5f0dc43b309"
+  integrity sha1-h4V8fJXVbSJDjO1M8ffl8NxDswk=
+  dependencies:
+    bitsyntax "~0.1.0"
+    bluebird "^3.5.2"
+    buffer-more-ints "~1.0.0"
+    readable-stream "1.x >=1.1.9"
+    safe-buffer "~5.1.2"
+    url-parse "~1.4.3"
+
 ansi-align@^3.0.0:
   version "3.0.0"
   resolved "https://npm-private-toolkit.fangdd.net/ansi-align/-/ansi-align-3.0.0.tgz#b536b371cf687caaef236c18d3e21fe3797467cb"
@@ -2158,6 +2197,15 @@ binary@^0.3.0:
     buffers "~0.1.1"
     chainsaw "~0.1.0"
 
+bitsyntax@~0.1.0:
+  version "0.1.0"
+  resolved "https://registry.npm.taobao.org/bitsyntax/download/bitsyntax-0.1.0.tgz#b0c59acef03505de5a2ed62a2f763c56ae1d6205"
+  integrity sha1-sMWazvA1Bd5aLtYqL3Y8Vq4dYgU=
+  dependencies:
+    buffer-more-ints "~1.0.0"
+    debug "~2.6.9"
+    safe-buffer "~5.1.2"
+
 bl@^2.2.1:
   version "2.2.1"
   resolved "https://npm-private-toolkit.fangdd.net/bl/-/bl-2.2.1.tgz#8c11a7b730655c5d56898cdc871224f40fd901d5"
@@ -2165,6 +2213,11 @@ bl@^2.2.1:
   dependencies:
     readable-stream "^2.3.5"
     safe-buffer "^5.1.1"
+
+bluebird@^3.5.2:
+  version "3.7.2"
+  resolved "https://registry.npm.taobao.org/bluebird/download/bluebird-3.7.2.tgz?cache=0&sync_timestamp=1589682744631&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fbluebird%2Fdownload%2Fbluebird-3.7.2.tgz#9f229c15be272454ffa973ace0dbee79a1b0c36f"
+  integrity sha1-nyKcFb4nJFT/qXOs4NvueaGww28=
 
 body-parser@1.19.0, body-parser@^1.19.0:
   version "1.19.0"
@@ -2339,6 +2392,11 @@ buffer-from@1.x, buffer-from@^1.0.0:
   version "1.1.1"
   resolved "https://npm-private-toolkit.fangdd.net/buffer-from/-/buffer-from-1.1.1.tgz#32713bc028f75c02fdb710d7c7bcec1f2c6070ef"
   integrity sha512-MQcXEUbCKtEo7bhqEs6560Hyd4XaovZlO/k9V3hjVUF/zwW7KBVdSK4gIt/bzwS9MbR5qob+F5jusZsb0YQK2A==
+
+buffer-more-ints@~1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npm.taobao.org/buffer-more-ints/download/buffer-more-ints-1.0.0.tgz#ef4f8e2dddbad429ed3828a9c55d44f05c611422"
+  integrity sha1-70+OLd261CntOCipxV1E8FxhFCI=
 
 buffer@^5.5.0:
   version "5.7.1"
@@ -3021,7 +3079,7 @@ date-fns@^2.10.0:
   resolved "https://npm-private-toolkit.fangdd.net/date-fns/-/date-fns-2.16.1.tgz#05775792c3f3331da812af253e1a935851d3834b"
   integrity sha1-BXdXksPzMx2oEq8lPhqTWFHTg0s=
 
-debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.6, debug@^2.6.8, debug@^2.6.9:
+debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.6, debug@^2.6.8, debug@^2.6.9, debug@~2.6.9:
   version "2.6.9"
   resolved "https://npm-private-toolkit.fangdd.net/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
   integrity sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==
@@ -5950,23 +6008,9 @@ messaging-api-common@^1.0.0, messaging-api-common@^1.0.0-beta.16:
     snake-case "^3.0.3"
     url-join "^4.0.1"
 
-messaging-api-line@^1.0.0-beta.20:
+messaging-api-line@^1.0.0-beta.20, messaging-api-line@^1.0.1:
   version "1.0.1"
   resolved "https://npm-private-toolkit.fangdd.net/messaging-api-line/-/messaging-api-line-1.0.1.tgz#94ebd42873b6a97e0ed68e0f49efa0ed7345c3ce"
-  integrity sha1-lOvUKHO2qX4O1o4PSe+g7XNFw84=
-  dependencies:
-    "@types/warning" "^3.0.0"
-    axios "^0.19.2"
-    axios-error "^1.0.0"
-    image-type "^4.1.0"
-    messaging-api-common "^1.0.0"
-    ts-invariant "^0.4.4"
-    type-fest "^0.15.1"
-    warning "^4.0.3"
-
-messaging-api-line@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.npm.taobao.org/messaging-api-line/download/messaging-api-line-1.0.1.tgz#94ebd42873b6a97e0ed68e0f49efa0ed7345c3ce"
   integrity sha1-lOvUKHO2qX4O1o4PSe+g7XNFw84=
   dependencies:
     "@types/warning" "^3.0.0"
@@ -6953,6 +6997,11 @@ progress@^2.0.0:
   resolved "https://npm-private-toolkit.fangdd.net/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
+promise-breaker@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.npm.taobao.org/promise-breaker/download/promise-breaker-5.0.0.tgz#58e8541f1619554057da95a211794d7834d30c1d"
+  integrity sha1-WOhUHxYZVUBX2pWiEXlNeDTTDB0=
+
 prompt-actions@^3.0.2:
   version "3.0.2"
   resolved "https://npm-private-toolkit.fangdd.net/prompt-actions/-/prompt-actions-3.0.2.tgz#537eee52241c940379f354a06eae8528e44ceeba"
@@ -7089,6 +7138,11 @@ qs@~6.5.2:
   resolved "https://npm-private-toolkit.fangdd.net/qs/-/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
   integrity sha512-N5ZAX4/LxJmF+7wN74pUD6qAh9/wnvdQcjq9TZjevvXzSUo7bfmw91saqMjzGS2xq91/odN2dW/WOl7qQHNDGA==
 
+querystringify@^2.1.1:
+  version "2.2.0"
+  resolved "https://registry.npm.taobao.org/querystringify/download/querystringify-2.2.0.tgz#3345941b4153cb9d082d8eee4cda2016a9aef7f6"
+  integrity sha1-M0WUG0FTy50ILY7uTNogFqmu9/Y=
+
 radio-symbol@^2.0.0:
   version "2.0.0"
   resolved "https://npm-private-toolkit.fangdd.net/radio-symbol/-/radio-symbol-2.0.0.tgz#7aa9bfc50485636d52dd76d6a8e631b290799ae1"
@@ -7179,7 +7233,7 @@ read-pkg@^5.2.0:
     parse-json "^5.0.0"
     type-fest "^0.6.0"
 
-readable-stream@1.1.x, readable-stream@^1.1.8:
+readable-stream@1.1.x, "readable-stream@1.x >=1.1.9", readable-stream@^1.1.8:
   version "1.1.14"
   resolved "https://npm-private-toolkit.fangdd.net/readable-stream/-/readable-stream-1.1.14.tgz#7cf4c54ef648e3813084c636dd2079e166c081d9"
   integrity sha1-fPTFTvZI44EwhMY23SB54WbAgdk=
@@ -7391,6 +7445,11 @@ require_optional@^1.0.1:
     resolve-from "^2.0.0"
     semver "^5.1.0"
 
+requires-port@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npm.taobao.org/requires-port/download/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
+  integrity sha1-kl0mAdOaxIXgkc8NpcbmlNw9yv8=
+
 resolve-cwd@^3.0.0:
   version "3.0.0"
   resolved "https://npm-private-toolkit.fangdd.net/resolve-cwd/-/resolve-cwd-3.0.0.tgz#0f0075f1bb2544766cf73ba6a6e2adfebcb13f2d"
@@ -7492,7 +7551,7 @@ rxjs@6.6.3, rxjs@^6.4.0, rxjs@^6.6.0, rxjs@^6.6.3:
   dependencies:
     tslib "^1.9.0"
 
-safe-buffer@5.1.2, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
+safe-buffer@5.1.2, safe-buffer@~5.1.0, safe-buffer@~5.1.1, safe-buffer@~5.1.2:
   version "5.1.2"
   resolved "https://npm-private-toolkit.fangdd.net/safe-buffer/-/safe-buffer-5.1.2.tgz#991ec69d296e0313747d59bdfd2b745c35f8828d"
   integrity sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==
@@ -8787,6 +8846,14 @@ url-parse-lax@^3.0.0:
   integrity sha1-FrXK/Afb42dsGxmZF3gj1lA6yww=
   dependencies:
     prepend-http "^2.0.0"
+
+url-parse@~1.4.3:
+  version "1.4.7"
+  resolved "https://registry.npm.taobao.org/url-parse/download/url-parse-1.4.7.tgz#a8a83535e8c00a316e403a5db4ac1b9b853ae278"
+  integrity sha1-qKg1NejACjFuQDpdtKwbm4U64ng=
+  dependencies:
+    querystringify "^2.1.1"
+    requires-port "^1.0.0"
 
 use@^3.1.0:
   version "3.1.1"

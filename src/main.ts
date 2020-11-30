@@ -7,6 +7,7 @@ import helmet from 'helmet';
 import throng from 'throng';
 import { setupApiDocs } from 'common/config/api-docs';
 import { AllExceptionsFilter } from 'common/filters';
+import { TransformInterceptor } from 'common/interceptors/transform.interceptor';
 import { loggerMiddleware } from 'common/middlewares';
 import { CustomValidationPipe } from 'common/pipes';
 import { isEnv } from 'common/utils';
@@ -32,6 +33,9 @@ async function bootstrap(): Promise<void> {
     app.use(helmet());
     app.use(loggerMiddleware);
     app.useGlobalFilters(new AllExceptionsFilter());
+
+    app.useGlobalInterceptors(new TransformInterceptor());
+
     app.useGlobalPipes(
         new CustomValidationPipe({
             forbidNonWhitelisted: true,

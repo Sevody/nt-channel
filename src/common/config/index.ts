@@ -1,7 +1,7 @@
 import { TypeOrmModuleOptions } from '@nestjs/typeorm';
 import * as dotenv from 'dotenv';
-
-import { SnakeNamingStrategy } from '../../snake-naming.strategy';
+import { IRabbitmqConnectionOption } from 'modules/external/amqp/rabbitmq.options';
+import { SnakeNamingStrategy } from './snake-naming.strategy';
 
 export class ConfigService {
     constructor() {
@@ -26,6 +26,12 @@ export class ConfigService {
 
     get nodeEnv(): string {
         return this.get('NODE_ENV') || 'development';
+    }
+
+    get amqpConfig(): IRabbitmqConnectionOption {
+        return {
+            urls: [this.get('AMQP_URL')],
+        };
     }
 
     get typeOrmConfig(): TypeOrmModuleOptions {

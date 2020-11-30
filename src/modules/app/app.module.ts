@@ -20,6 +20,7 @@ import { isEnv } from 'common/utils';
 import { ChatbotModule } from 'modules/chatbot/chatbot.module';
 import { RSSbotModule } from 'modules/rssbot/rssbot.module';
 import { I18nModule } from 'modules/external/i18n';
+import { RabbitmqModule } from 'modules/external/amqp';
 import { WebhooksModule } from 'modules/webhooks/webhooks.module';
 import { AppController } from './app.controller';
 import { SharedModule } from 'modules/shared/shared.module';
@@ -44,6 +45,11 @@ import { SharedModule } from 'modules/shared/shared.module';
                     objectNotation: true,
                 };
             },
+        }),
+        RabbitmqModule.registerAsync({
+            useFactory: (configService: ConfigService) =>
+                configService.amqpConfig,
+            inject: [ConfigService],
         }),
         ChatbotModule,
         WebhooksModule,

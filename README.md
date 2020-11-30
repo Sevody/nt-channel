@@ -13,8 +13,7 @@
 * Local setup
 
 ```bash
-git clone https://github.com/zsevic/chatbot-starter
-cd chatbot-starter
+cd nt-channel
 cp .env.sample .env # change values after copying
 npm i
 npm run start:dev
@@ -23,8 +22,8 @@ npm run start:dev
 * Chatbot setup for local usage
 
 ```bash
-npx ngrok http 3000
-echo "Y" | npm run messenger-webhook:set <URL>/webhooks/messenger
+npx ngrok http 7010
+# echo "Y" | npm run messenger-webhook:set <URL>/webhooks/messenger
 ```
 
 ### Build
