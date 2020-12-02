@@ -1,6 +1,6 @@
-# chatbot-starter
+# nt-channel
 
-> Chatbot starter
+> NT Channel
 
 ## Getting started
 
