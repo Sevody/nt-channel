@@ -8,8 +8,8 @@ import {
 
 @Entity({ name: 'channel_users' })
 export class UserEntity {
-    @PrimaryGeneratedColumn('uuid')
-    id: string;
+    @PrimaryGeneratedColumn()
+    id: number;
 
     @CreateDateColumn()
     createdAt: Date;
