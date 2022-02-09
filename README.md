@@ -1,6 +1,6 @@
 # nt-channel
 
-> Message Channel And Chat Bot for _Line_ & _Message_ & _Telegram_
+> Message Channel And Chat Bot for _Line_ & _Whatsapp_ & _Telegram_
 
 ## Getting started
 
