@@ -1,16 +1,16 @@
 # nt-channel
 
-> NT Channel
+> Message Channel And Chat Bot for _Line_ & _Message_ & _Telegram_
 
 ## Getting started
 
 ### Prerequisites
 
-- Node.js installed (version 14)
+-   Node.js installed (version 14)
 
 ### Setup
 
-* Local setup
+-   Local setup
 
 ```bash
 cd nt-channel
@@ -19,7 +19,7 @@ npm i
 npm run start:dev
 ```
 
-* Chatbot setup for local usage
+-   Chatbot setup for local usage
 
 ```bash
 npx ngrok http 7010
@@ -53,4 +53,4 @@ Generated at `/api-docs` endpoint
 
 ### Technologies used
 
-- Node.js, TypeScript, NestJS, Bottender
+-   Node.js, TypeScript, NestJS, Bottender
